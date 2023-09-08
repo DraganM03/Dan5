@@ -19,8 +19,6 @@ function loadJSON(){
 
 loadJSON()
 
-
-
 //a2
 
 let elements = list.querySelectorAll("li")
@@ -68,8 +66,12 @@ function removeEl(x){
 
 
 function addNew(event){
+
     //no refresh
     event.preventDefault()
+    if(!input.value){
+        return
+    }
 
     //novi element liste
     let newEl = document.createElement("li")
@@ -95,9 +97,7 @@ function addNew(event){
         clickText(newEl)
     })
 
-    updateCookie()
-
-    
+    updateCookie()   
 }
 
 submit.addEventListener("click", addNew)
@@ -118,7 +118,7 @@ function searchFun(){
         //console.log(e.innerText)
         //console.log(search.value)
         if(e.innerText.includes(search.value)){
-            e.style.display = "block"
+            e.style.display = "flex"
         }else{
             e.style.display = "none"
         }
@@ -216,26 +216,3 @@ document.addEventListener("keydown", (event)=>{
 
 })
 
-
-
-
-
-/*
-function updateCookie2(){
-    document.cookie = ""
-
-    //document.cookie="expires=Thu, 01 Jan 1970 00:00:00 UTC"
-
-    rez = ""
-    elements.forEach((el,i)=>{
-        rez+= `element${i+1}\=${el.firstChild.innerText}; `  
-    })
-
-    setTimeout(()=>{
-        document.cookie = rez
-        console.log(document.cookie)
-    }, 3000)
-    
-}
-
-*/

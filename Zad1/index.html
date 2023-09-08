@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-​
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +7,32 @@
     <title>TODO</title>
     <link rel="stylesheet" href="style.css">
 </head>
-​
 <body>
     <header>
         <div>
-            <div>
-                <div>
+            <div class="header-container">
+                <div class="title">
                     <h1>TODO List</h1>
+                    <p>By Filip Jovanovic and Dragan Mijatovic</p>
                 </div>
-                <div>
-                    
-                        <input id="search" type="text" placeholder="Search Items...">
-                        
-                    
-                    <ul id="searchResults">
-                    </ul>
+                <div class="search-bar">
+                    <input id="search" type="text" placeholder="Search Items...">
                 </div>
             </div>
         </div>
     </header>
-    <div>
+    <div class="main">
         <div>
-            <h2>Add Items</h2>
-            <form id="forma1">
-                <input type="text">
-                <input type="submit" id="submit2" value="Submit">
-            </form>
-            <h2>Items</h2>
+            <div class="add-container">
+                <div>
+                    <h2>Add Items</h2>
+                </div>
+                <form id="forma1">
+                    <input type="text">
+                    <input type="submit" id="submit2" value="Submit">
+                </form>
+            </div>
+            <h2>Items:</h2>
             <ul id="lista">
 
             </ul>
@@ -42,10 +40,8 @@
         </div>
     </div>
  
-    <footer>By Filip Jovanovic and Dragan Mijatovic &copy;</footer>
 
     <script src="script.js"></script>
 
 </body>
-
 </html>

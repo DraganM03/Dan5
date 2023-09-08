@@ -1,5 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
 .selected{
     background-color: limegreen;
     border: 2px green solid;
     color: white;
+}
+
+/*bonus style*/
+
+
+body{
+    background-color: #E4E4D0;
+}
+
+header{
+    width: 100%;
+    flex-direction: row;
+    background-color: #94A684;
+}
+
+div.search-bar{
+    flex: 1;
+    margin-right: 10%;
+}
+
+div.search-bar input[type="text"]{
+    display: block;
+    background-color: #E4E4D0;
+    color: black;
+    font-size: 14px;
+    height: 48px;
+    width: 144px;
+    border-radius: 25px;
+    padding: 0 15px;
+    border: 2px solid #94A684;
+    float: right;
+}
+
+div.title{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+div.title h1{
+    color: white;
+    font-size: 42px;
+    margin-left: 10%;
+}
+
+div.title p{
+    font-size: 10px;
+    margin-left: 10%;
+    color: #E4E4D0;
+}
+
+.header-container{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.main{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+ul#lista{
+    overflow-y:auto;
+    height: 72.5vh;
+    padding-right: 15px;
+}
+
+ul#lista::-webkit-scrollbar {
+    
+    background-color: #94A684;
+    width: 15px;
+    display: block;
+    padding: 0 2px;
+    border: 5px solid #E4E4D0; /*happy little accident*/
+    border-radius: 25px;
+}
+
+ul#lista::-webkit-scrollbar-thumb {
+    background-color: #E4E4D0;
+    border-radius: 25px;
+    border: #94A684 solid 2px; 
+}
+
+
+li{
+    list-style: none;
+    display: flex;
+    background-color: #94A684;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    color: white;
+    align-items: center;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.164);
+}
+
+li:first-child{
+    margin-top: 0;
+}
+
+li:last-child{
+    margin-bottom: 0;
+}
+
+li a{
+    flex: 1; /*ne razumijem ni zasto ni kako ali radi*/
+    font-size: 20px;
+}
+
+li button{
+	display:inline-block;
+	background-color:#94a684;
+	color:#E4E4D0;
+	border:2px solid #E4E4D0;
+	border-radius:25px;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:8px 12px;
+    cursor:pointer;
+}
+
+h2{
+    display: block;
+    margin-left: 5px;
+    max-width: 144px;
+    padding: 10px 0;
+    color: white;
+    text-shadow: #94a684 3px 3px;
+}
+
+div.add-container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    min-width: 300px;
+    border: 3px solid #94A684;
+    border-bottom: none;
+    border-radius: 25px;
+}
+
+div.add-container div {
+    flex: 1;
+}
+
+div.add-container form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    /*background-color: #94A684;*/
+    border-top: 4px solid #94A684;
+    border-radius: 0 0 25px 25px;
+    margin: auto;
+    flex: 1;
+}
+
+div.add-container form input[type="text"]{
+    border-radius: 0 0 0 25px;
+    border: 4px solid #94A684;
+    background-color: #E4E4D0;
+    border-top: none;
+    padding: 5px 34px;
+}
+
+div.add-container form input[type="submit"]{
+    border-radius: 0 0 25px 0;
+    border: 2px solid #94A684;
+    border-top: none;
+    padding: 5px 20px 5px 10px;
+    background-color: #94A684;
+    font-weight: bold;
+    color: white;
+    text-shadow: #94A684 2px 2px;
+
+}
+
+input:focus{
+    outline: none;
 }
