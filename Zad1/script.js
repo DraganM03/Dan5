@@ -203,7 +203,7 @@ document.addEventListener("keydown", (event)=>{
     }
 
     function selektujEl(pozicija){
-        elementV.forEach(el=>{
+        elements.forEach(el=>{
             el.classList.remove("selected")
         })
         elementV[pozicija].classList.add("selected")
