@@ -153,18 +153,20 @@ elements.forEach(el=>{
 
 var pozicija = 0
 var prviKlik = false
-function selektujEl(pozicija){
-    elements.forEach(el=>{
-        el.classList.remove("selected")
-    })
-    elements[pozicija].classList.add("selected")
-}
+
 
 
 document.addEventListener("keydown", (event)=>{
     //console.log(event.code)
     let pomjeraj = 0
+    let elementV = []
+    elements.forEach(el => {
+        if(el.style.display != "none"){
+            elementV.push(el)
+        }
+    });
 
+    //console.log(elementV)
     //naopak pomjeraj
     if(event.code == "ArrowUp"){
         pomjeraj--;
@@ -175,11 +177,11 @@ document.addEventListener("keydown", (event)=>{
     }else if(event.code == "Enter"){
         console.log("enetered")
 
-        if(!elements){
+        if(!elementV){
             return
         }
         if(prviKlik){
-            clickText(elements[pozicija].firstChild)
+            clickText(elementV[pozicija].firstChild)
         }
         return
     }else{
@@ -193,11 +195,18 @@ document.addEventListener("keydown", (event)=>{
         prviKlik = true
     }else if(pomjeraj){
         pozicija+=pomjeraj
-        if(pozicija == elements.length){
+        if(pozicija == elementV.length){
             pozicija = 0
         }else if(pozicija<0){
-            pozicija = elements.length-1
+            pozicija = elementV.length-1
         }
+    }
+
+    function selektujEl(pozicija){
+        elementV.forEach(el=>{
+            el.classList.remove("selected")
+        })
+        elementV[pozicija].classList.add("selected")
     }
 
     selektujEl(pozicija)
