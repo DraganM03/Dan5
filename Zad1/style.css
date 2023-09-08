@@ -161,6 +161,7 @@ div.add-container{
 
 div.add-container div {
     flex: 1;
+    width: 100%;
 }
 
 div.add-container form{
@@ -197,4 +198,10 @@ div.add-container form input[type="submit"]{
 
 input:focus{
     outline: none;
+}
+
+@media only screen and (max-width: 490px) { 
+    div.search-bar{
+        margin-right: 5% !important;
+    }
 }

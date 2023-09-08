@@ -10,7 +10,9 @@ function loadJSON(){
         var result = loadingItems.split("{")[1].split("}")[0].split(",")
         result.forEach(res => {
             //console.log(res.split(":")[1])
-            list.innerHTML+=`<li><a>${res.split(":")[1]}</a><button>X</button></li>`
+            if(res.split(":")[1]){
+                list.innerHTML+=`<li><a>${res.split(":")[1]}</a><button>X</button></li>`
+            }
         });
     }
     
