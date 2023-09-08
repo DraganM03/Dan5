@@ -170,10 +170,10 @@ document.addEventListener("keydown", (event)=>{
     //naopak pomjeraj
     if(event.code == "ArrowUp"){
         pomjeraj--;
-        console.log("strelica gore")
+        //console.log("strelica gore")
     }else if(event.code == "ArrowDown"){
         pomjeraj++;
-        console.log("strelica dole")
+        //console.log("strelica dole")
     }else if(event.code == "Enter"){
         console.log("enetered")
 
