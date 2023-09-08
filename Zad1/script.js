@@ -11,7 +11,7 @@ function loadJSON(){
         result.forEach(res => {
             //console.log(res.split(":")[1])
             if(res.split(":")[1]){
-                list.innerHTML+=`<li><a>${res.split(":")[1]}</a><button>X</button></li>`
+                list.innerHTML+=`<li><a>${res.split(":")[1]}</a><button>✖</button></li>`
             }
         });
     }
@@ -82,7 +82,7 @@ function addNew(event){
     console.log(newEl.innerText)
     //dugme od novog elementa liste
     let newX = document.createElement("button")
-    newX.innerText = "X"
+    newX.innerText = "✖"
     newEl.appendChild(newX)
     list.appendChild(newEl)
     xButtons = document.querySelectorAll("li button")
