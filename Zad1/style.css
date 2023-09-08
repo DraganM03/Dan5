@@ -19,8 +19,8 @@ body::-webkit-scrollbar {
 
 
 .selected{
-    background-color: limegreen;
-    border: 2px green solid;
+    background-color: #AEC3AE;
+    border: 2px #94A684 solid;
     color: white;
 }
 
