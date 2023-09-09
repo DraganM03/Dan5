@@ -95,9 +95,9 @@ function addNew(event){
         removeEl(newX)
     })
 
-    newEl.addEventListener("click", ()=>{
+    /*newEl.addEventListener("click", ()=>{
         clickText(newEl)
-    })
+    })*/
 
     updateCookie()   
 }
@@ -143,12 +143,12 @@ function clickText(el){
 }
 
 
-elements.forEach(el=>{
+/*elements.forEach(el=>{
     el.firstChild.addEventListener("click",()=>{
         clickText(el.firstChild)
     })
 
-})
+})*/
 
 
 //c
