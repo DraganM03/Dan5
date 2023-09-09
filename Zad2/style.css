@@ -1,0 +1,33 @@
+#inputNum::-webkit-inner-spin-button {
+    opacity: 0;
+}
+
+div.fields{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.field{
+    display: flex;
+    height: 36px;
+    width: 36px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px 5px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+div.field input{
+    width: 100%;
+    height: 100%;
+    font-size: larger;
+    text-align: center;
+    border: none;
+}
+
+div.field input:focus{
+    outline: none;
+}
